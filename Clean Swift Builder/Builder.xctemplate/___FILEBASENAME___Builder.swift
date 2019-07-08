@@ -15,7 +15,9 @@ import UIKit
 
 class ___VARIABLE_sceneName___Builder {
     
-    class func buildModule() {
+    class func buildViewController() -> ___VARIABLE_sceneName___ViewController {
+        
+        let viewController = ___VARIABLE_sceneName___ViewController()
         // connecting all components together
         let interactor = ___VARIABLE_sceneName___Interactor()
         let presenter = ___VARIABLE_sceneName___Presenter()
@@ -26,5 +28,7 @@ class ___VARIABLE_sceneName___Builder {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+        
+        return viewController
     }
 }
