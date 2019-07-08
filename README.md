@@ -5,8 +5,8 @@ XcodeTemplates
 
 1) Clone the repo and cd into it from terminal:
 ```
-➜ git clone https://github.com/Ahmed-Elsman/Clean-Swift-Elsman.git
-➜ cd Clean-Swift-Elsman-master
+➜ git clone https://github.com/Ahmed-Elsman/Clean-Swift-Builder.git
+➜ cd Clean-Swift-Builder-master
 ```
 2) Install template from terminal by writing:
 ```
@@ -21,6 +21,6 @@ http://clean-swift.com/clean-swift-ios-architecture
 
 ##Uninstall the Clean Swift Xcode templates, run:
 ```
-➜ cd Clean-Swift-Elsman-master
+➜ cd Clean-Swift-Builder-master
 ➜ make uninstall_templates
 ```
