@@ -13,7 +13,7 @@ XcodeTemplates
 ➜ make install_templates
 ```
 3) Quit and re-launch Xcode and you should now see the following when creating a new file:
-<img width="730" alt="Screen Shot 2019-07-08 at 11 55 29 AM" src="https://user-images.githubusercontent.com/8681037/60797377-d4824c80-a177-11e9-8359-4a41124aee3f.png">
+<img width="730" alt="builder" src="https://user-images.githubusercontent.com/8681037/60799157-4ad47e00-a17b-11e9-870b-14eee272070a.png">
 
 ## To learn more about Clean Swift and the VIP cycle, read:
 
