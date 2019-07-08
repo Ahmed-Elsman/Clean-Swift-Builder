@@ -15,7 +15,7 @@ import UIKit
 
 class ___VARIABLE_sceneName___Builder {
     
-    class func buildViewController() -> ___VARIABLE_sceneName___ViewController {
+    class func viewController() -> ___VARIABLE_sceneName___ViewController {
         
         let viewController = ___VARIABLE_sceneName___ViewController()
         // connecting all components together
