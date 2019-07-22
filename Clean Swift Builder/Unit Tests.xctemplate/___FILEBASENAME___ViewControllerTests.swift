@@ -13,8 +13,7 @@
 @testable import ___PROJECTNAMEASIDENTIFIER___
 import XCTest
 
-class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase
-{
+class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
   // MARK: Subject under test
   
   var sut: ___VARIABLE_sceneName___ViewController!
@@ -22,50 +21,43 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase
   
   // MARK: Test lifecycle
   
-  override func setUp()
-  {
+  override func setUp() {
     super.setUp()
     window = UIWindow()
     setup___VARIABLE_sceneName___ViewController()
   }
   
-  override func tearDown()
-  {
+  override func tearDown() {
     window = nil
     super.tearDown()
   }
   
   // MARK: Test setup
   
-  func setup___VARIABLE_sceneName___ViewController()
-  {
+  func setup___VARIABLE_sceneName___ViewController() {
     let bundle = Bundle.main
     let storyboard = UIStoryboard(name: "Main", bundle: bundle)
     sut = storyboard.instantiateViewController(withIdentifier: "___VARIABLE_sceneName___ViewController") as! ___VARIABLE_sceneName___ViewController
   }
   
-  func loadView()
-  {
+  func loadView() {
     window.addSubview(sut.view)
     RunLoop.current.run(until: Date())
   }
   
   // MARK: Test doubles
   
-  class ___VARIABLE_sceneName___BusinessLogicSpy: ___VARIABLE_sceneName___BusinessLogic
-  {
+  class ___VARIABLE_sceneName___BusinessLogicSpy: ___VARIABLE_sceneName___BusinessLogic {
     var doSomethingCalled = false
     
-    func doSomething(request: ___VARIABLE_sceneName___.Something.Request)
-    {
+    func doSomething(request: ___VARIABLE_sceneName___.Something.Request) {
       doSomethingCalled = true
     }
   }
   
   // MARK: Tests
   
-  func testShouldDoSomethingWhenViewIsLoaded()
-  {
+  func testShouldDoSomethingWhenViewIsLoaded() {
     // Given
     let spy = ___VARIABLE_sceneName___BusinessLogicSpy()
     sut.interactor = spy
@@ -77,8 +69,7 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase
     XCTAssertTrue(spy.doSomethingCalled, "viewDidLoad() should ask the interactor to do something")
   }
   
-  func testDisplaySomething()
-  {
+  func testDisplaySomething() {
     // Given
     let viewModel = ___VARIABLE_sceneName___.Something.ViewModel()
     
