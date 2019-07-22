@@ -12,7 +12,7 @@
 
 import UIKit
 
-@objc protocol ___VARIABLE_sceneName___RoutingLogi {
+@objc protocol ___VARIABLE_sceneName___RoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
