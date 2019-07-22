@@ -16,7 +16,7 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class {
   func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VARIABLE_sceneName___DisplayLogic {
+class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_sceneName___DisplayLogic {
   var interactor: ___VARIABLE_sceneName___BusinessLogic?
   var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
@@ -29,7 +29,6 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
-  
   // MARK: Routing
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
