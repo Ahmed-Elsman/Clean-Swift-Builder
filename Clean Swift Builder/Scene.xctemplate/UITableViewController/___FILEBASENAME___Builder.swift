@@ -10,13 +10,12 @@
 //  see http://clean-swift.com
 //
 
-
 import UIKit
 
 class ___VARIABLE_sceneName___Builder {
-    
+
     class func viewController() -> ___VARIABLE_sceneName___ViewController {
-        
+
         let viewController = ___VARIABLE_sceneName___ViewController()
         // connecting all components together
         let interactor = ___VARIABLE_sceneName___Interactor()
@@ -28,7 +27,7 @@ class ___VARIABLE_sceneName___Builder {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
-        
+
         return viewController
     }
 }
