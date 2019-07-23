@@ -12,32 +12,27 @@
 
 import UIKit
 
-protocol ___VARIABLE_sceneName___DisplayLogic: class
-{
+protocol ___VARIABLE_sceneName___DisplayLogic: class {
   func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: UITableViewController, ___VARIABLE_sceneName___DisplayLogic
-{
+class ___VARIABLE_sceneName___ViewController: UITableViewController, ___VARIABLE_sceneName___DisplayLogic {
   var interactor: ___VARIABLE_sceneName___BusinessLogic?
   var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
   // MARK: Object lifecycle
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
   }
   
-  required init?(coder aDecoder: NSCoder)
-  {
+  required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
   
   // MARK: Routing
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let scene = segue.identifier {
       let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
       if let router = router, router.responds(to: selector) {
@@ -48,8 +43,7 @@ class ___VARIABLE_sceneName___ViewController: UITableViewController, ___VARIABLE
   
   // MARK: View lifecycle
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     doSomething()
   }
@@ -58,14 +52,12 @@ class ___VARIABLE_sceneName___ViewController: UITableViewController, ___VARIABLE
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
-  {
+  func doSomething() {
     let request = ___VARIABLE_sceneName___.Something.Request()
     interactor?.doSomething(request: request)
   }
   
-  func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
-  {
+  func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
     //nameTextField.text = viewModel.name
   }
 }
