@@ -21,17 +21,17 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
   var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
   // MARK: Object lifecycle
-  
+
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
-  
+
   // MARK: Routing
-  
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let scene = segue.identifier {
       let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
@@ -40,23 +40,23 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
       }
     }
   }
-  
+
   // MARK: View lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     doSomething()
   }
-  
+
   // MARK: Do something
-  
+
   //@IBOutlet weak var nameTextField: UITextField!
-  
+
   func doSomething() {
     let request = ___VARIABLE_sceneName___.Something.Request()
     interactor?.doSomething(request: request)
   }
-  
+
   func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
     //nameTextField.text = viewModel.name
   }
